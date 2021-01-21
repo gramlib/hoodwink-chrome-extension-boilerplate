@@ -1,0 +1,91 @@
+body{
+  background: white;
+}
+.main{
+  padding: 10px 0 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.recordList{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: hidden;
+}
+
+.RecordInfoPanel{
+  position: absolute;
+  right: 0;
+  top: 40px;
+  bottom: 0;
+  width: 600px;
+  background: white;
+  border: 1px solid rgb(198,198,198);
+  border-left: 2px solid rgb(198,198,198);
+
+  .close{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    z-index: 999;
+
+  }
+
+  :global{
+    .ant-tabs-small > .ant-tabs-nav .ant-tabs-tab{
+      padding: 0;
+      height: 30px;
+      background: #fafafa;
+    }
+    .ant-tabs-nav-wrap{
+      padding-left: 30px;
+    }
+  }
+
+  .paneBox{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .paramEditor{
+    :global{
+      .jsoneditor{
+        height: 220px;
+      }
+    }
+  }
+
+  .HeadersEditor{
+    :global{
+      .jsoneditor{
+        height: 400px;
+      }
+    }
+  }
+
+  .Editor{
+    position: relative;
+    flex: 1;
+    :global{
+      .jsoneditor{
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+  }
+}
